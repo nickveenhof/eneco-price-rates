@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@lovebug356"],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/lovebug356/eneco-price-rates",
+  "domain": "eneco_price_rates",
+  "name": "Eneco Price Rates",
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "version": "1.0.0"
+}

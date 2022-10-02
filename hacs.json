@@ -1,0 +1,5 @@
+{
+  "name": "Eneco Price Rates",
+  "render_readme": true,
+  "iot_class": "Cloud Polling"
+}
