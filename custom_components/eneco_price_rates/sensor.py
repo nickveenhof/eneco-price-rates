@@ -29,9 +29,14 @@ class EnergyPriceSensor(SensorEntity):
         self._state = value
 
     @property
+    def unique_id(self) -> str:
+        """Return the unique id of the sensor."""
+        return self._name.lower().replace(' ', '_')
+
+    @property
     def name(self) -> str:
         """Return the name of the sensor."""
-        return 'Energiekost Dagtarief'
+        return self._name
 
     @property
     def state(self):
