@@ -1,22 +1,15 @@
 import logging
+from typing import NamedTuple
 import aiohttp
 import asyncio
 from bs4 import BeautifulSoup
+
+from custom_components.eneco_price_rates.types import EnecoInfo, EnecoProduct
 
 _LOGGER = logging.getLogger(__name__)
 
 WEBSITE="https://eneco.be/nl/elektriciteit-gas/tariefkaarten"
 
-
-class EnecoProduct:
-    def __init__(self, name: str, pdf: str):
-        self.name = name
-        self.pdf = pdf
-
-class EnecoInfo:
-    def __init__(self, period: str, products: list[EnecoProduct]):
-        self.period = period
-        self.products = products
 
 class EnecoWeb:
     def __init__(self):
