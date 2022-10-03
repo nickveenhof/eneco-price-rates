@@ -5,7 +5,11 @@
   "documentation": "https://github.com/lovebug356/eneco-price-rates",
   "domain": "eneco_price_rates",
   "name": "Eneco Price Rates",
-  "requirements": ["beautifulsoup4==4.11.1", "aiohttp==3.8.1"],
+  "requirements": [
+    "beautifulsoup4==4.11.1",
+    "aiohttp==3.8.1",
+    "tabula-py==2.5.1"
+  ],
   "iot_class": "cloud_polling",
   "version": "0.0.1"
 }
