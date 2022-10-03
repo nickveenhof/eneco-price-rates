@@ -4,7 +4,7 @@ import logging
 from homeassistant import core
 from homeassistant.helpers.typing import ConfigType
 
-DOMAIN = "eneco_price_rates"
+from custom_components.eneco_price_rates.const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 

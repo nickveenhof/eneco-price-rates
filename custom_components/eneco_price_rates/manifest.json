@@ -1,6 +1,6 @@
 {
   "codeowners": ["@lovebug356"],
-  "config_flow": false,
+  "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/lovebug356/eneco-price-rates",
   "domain": "eneco_price_rates",

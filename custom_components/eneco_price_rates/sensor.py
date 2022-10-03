@@ -17,13 +17,13 @@ async def async_setup_platform(
     # We only want this platform to be set up via discovery.
     if discovery_info is None:
         return
-    add_entities(
-        [
-            ElectricityPriceSensor("Energiekost Dagtarief", 0.2627),
-            ElectricityPriceSensor("Energiekost Nachttarief", 0.2598),
-            GasPriceSensor("Energiekost gasprijs", 0.1122),
-        ]
-    )
+    # add_entities(
+    #     [
+    #         ElectricityPriceSensor("Energiekost Dagtarief", 0.2627),
+    #         ElectricityPriceSensor("Energiekost Nachttarief", 0.2598),
+    #         GasPriceSensor("Energiekost gasprijs", 0.1122),
+    #     ]
+    # )
 
 
 class EnergyPriceSensor(SensorEntity):
