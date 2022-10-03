@@ -20,7 +20,7 @@ class EnecoWeb:
             async with session.get(WEBSITE) as response:
                 return await response.text()
 
-    async def fetch_electricity_products(self) -> list[EnecoProduct]:
+    async def fetch_electricity_products(self) -> EnecoInfo:
         products: list[EnecoProduct] = []
         soup = BeautifulSoup(await self.fetch_page(), "html.parser")
         for item in soup.select(

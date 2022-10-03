@@ -18,13 +18,13 @@ class EnecoPriceRatesConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             errors["base"] = "auth"
 
         web = EnecoWeb()
-        products = await web.fetch_electricity_products()
+        info = await web.fetch_electricity_products()
 
         options_schema = vol.Schema(
             {
-                vol.Optional(
-                    "Products", default=list(map(lambda x: x.name, products))
-                ): cv.multi_select(products),
+                vol.Optional("Products", default=info.product_names()): cv.multi_select(
+                    info.products
+                ),
             }
         )
         return self.async_show_form(

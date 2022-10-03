@@ -10,6 +10,9 @@ class EnecoInfo(NamedTuple):
     period: str
     products: list[EnecoProduct]
 
+    def product_names(self) -> list[str]:
+        map(lambda x: x.name, self.products)
+
 
 class DayAndNightPrice(NamedTuple):
     yearly_fee: float

@@ -25,4 +25,4 @@ async def test_flow_user_init(enecoWeb, hass):
         "step_id": "user",
         "type": "form",
     }
-    assert expected["handler"] == result["handler"]
+    assert result["errors"] == {}
