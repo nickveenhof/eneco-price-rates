@@ -24,7 +24,6 @@ class EnecoPriceRatesConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             {
                 vol.Required(
                     "product",
-                    default=info.product_names()[0],
                     description="Selected Product",
                 ): vol.In(info.product_names()),
             }
