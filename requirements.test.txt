@@ -1,4 +1,6 @@
 # From our manifest.json for our custom component
+beautifulsoup4==4.11.1
+aiohttp==3.8.1
 
 # Strictly for tests
 codecov==2.1.12

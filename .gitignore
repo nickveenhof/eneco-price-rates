@@ -1,2 +1,4 @@
 /.coverage
 /tests/__pycache__/
+custom_components/eneco_price_rates/__pycache__/*
+custom_components/__pycache__/*
