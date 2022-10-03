@@ -11,17 +11,19 @@ async def async_setup_platform(
     hass: HomeAssistant,
     config: ConfigType,
     add_entities: AddEntitiesCallback,
-    discovery_info: DiscoveryInfoType | None = None
+    discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
     """Set up the sensor platform."""
     # We only want this platform to be set up via discovery.
     if discovery_info is None:
         return
-    add_entities([
-        ElectricityPriceSensor('Energiekost Dagtarief', 0.2627),
-        ElectricityPriceSensor('Energiekost Nachttarief', 0.2598),
-        GasPriceSensor('Energiekost gasprijs', 0.1122),
-    ])
+    add_entities(
+        [
+            ElectricityPriceSensor("Energiekost Dagtarief", 0.2627),
+            ElectricityPriceSensor("Energiekost Nachttarief", 0.2598),
+            GasPriceSensor("Energiekost gasprijs", 0.1122),
+        ]
+    )
 
 
 class EnergyPriceSensor(SensorEntity):
@@ -36,7 +38,7 @@ class EnergyPriceSensor(SensorEntity):
     @property
     def unique_id(self) -> str:
         """Return the unique id of the sensor."""
-        return self._name.lower().replace(' ', '_')
+        return self._name.lower().replace(" ", "_")
 
     @property
     def name(self) -> str:
