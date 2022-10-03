@@ -22,7 +22,11 @@ class EnecoPriceRatesConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         options_schema = vol.Schema(
             {
-                vol.Required("Products"): cv.multi_select(info.product_names()),
+                vol.Required(
+                    "product",
+                    default=info.product_names()[0],
+                    description="Selected Product",
+                ): vol.In(info.product_names()),
             }
         )
         return self.async_show_form(
